@@ -1,24 +1,23 @@
-box::use(
-  shiny[bootstrapPage, div, moduleServer, NS, renderUI, tags, uiOutput],
-  rhino[rhinos],
-)
-box::use(
-  app/view/chart,
-)
+# main.R
 
+box::use(
+  shiny[fluidPage, tags, uiOutput, moduleServer, NS]
+)
 
 #' @export
 ui <- function(id) {
   ns <- NS(id)
-
-  bootstrapPage(
-    chart$ui(ns("chart"))
+  fluidPage(
+    tags$head(
+      tags$script(src = "static/lib/d3.v7.min.js"),
+      tags$script(src = "static/js/bar-chart.js")
+    ),
+    tags$svg(width = 400, height = 300, id = "d3_svg")
   )
 }
-
 #' @export
 server <- function(id) {
   moduleServer(id, function(input, output, session) {
-    chart$server("chart")
+    # is server logic always needed?
   })
 }
