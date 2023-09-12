@@ -1,7 +1,13 @@
 // Load data from CSV file
-d3.csv("./static/data.csv").then(function(data) {
+
+
+
+export function drawBarChart(){
+
+  console.log("hello");
+  // d3.csv("./static/data.csv").then(function(data) {
   
-    console.log("Raw Data:", data);
+  //   console.log("Raw Data:", data);
     // Parse the data to appropriate types
     // data.forEach(function(d) {
     //   d.x = +d.x;
@@ -29,5 +35,5 @@ d3.csv("./static/data.csv").then(function(data) {
     //   .attr('width', 20)
     //   .attr('height', d => height - yScale(d.y))
     //   .attr('fill', 'steelblue');
-  });
+  }
   

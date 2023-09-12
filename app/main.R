@@ -19,8 +19,8 @@ server <- function(id) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
-    # TODO: data should be maipulated here then passed to JS
-    data <- data.frame(name = c("A","B","C"), value = c(23, 45, 67))
-     session$sendCustomMessage(type = 'prepareDataForChart', message = data)
+   # TODO: data should be maipulated here then passed to JS
+    data <- data.frame(name = c("A", "B", "C"), value = c(23, 45, 67))
+    session$sendCustomMessage(type = 'prepareDataForChart', message = data)
   })
 }
