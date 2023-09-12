@@ -15,7 +15,6 @@ d3_chart_server <- function(id){
  moduleServer(id, function(input, output, session){
     output$d3_chart <- renderUI({
         tags$script()  
-        )
-    })
  })
-} 
+    })
+}
