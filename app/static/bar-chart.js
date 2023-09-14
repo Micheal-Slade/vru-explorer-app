@@ -8,8 +8,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
  //Todo: chart needs dynamic sizing and margins.
 
+
+
   const data = [4, 8, 15, 16, 23, 42, 50, 100, 200];
-  const width = 420;  
+
+  const height = 600;
+  const width = 620;
+  const marginTop = 20;
+  const marginBottom = 20;
+  const marginLeft = 30;
+  const marginRight = 20;
+  
   const barHeight = 20;
 
   // Check to see that the data has loaded in correctly
