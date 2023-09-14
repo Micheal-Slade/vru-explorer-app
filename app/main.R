@@ -1,22 +1,25 @@
 # main.R
 
 box::use(
-  shiny[fluidPage, tags, uiOutput, moduleServer, NS, reactive]
+  shiny[fluidPage, tags, uiOutput, moduleServer, NS, reactive, div],
+  app/view/table,
 )
 
 
 #' @export
 ui <- function(id) {
-  ns <- shiny::NS(id)
-  
+  ns <- NS(id)
   fluidPage(
     tags$head(
       tags$script(src = "static/d3.v7.min.js"),
       tags$script(src = "static/bar-chart.js")
     ),
-    tags$svg(class = "chart", id = ns("my_chart"))
+    tags$div(class = "legend", id = ns("my_chart")),
+    tags$svg(class = "chart", id = ns("my_chart")),
+    tags$div(class = "table", id = ns("my_chart"))
   )
 }
+
 
 #' @export
 server <- function(id) {
