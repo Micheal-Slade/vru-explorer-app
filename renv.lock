@@ -96,13 +96,13 @@
     },
     "askpass": {
       "Package": "askpass",
-      "Version": "1.2.0",
+      "Version": "1.1",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "sys"
       ],
-      "Hash": "cad6cf7f1d5f6e906700b9d3e718c796"
+      "Hash": "e8a22846fff485f0be3770c2da758713"
     },
     "backports": {
       "Package": "backports",
@@ -191,12 +191,13 @@
       "Package": "bslib",
       "Version": "0.5.1.9000",
       "Source": "GitHub",
+      "Remotes": "rstudio/htmltools",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "bslib",
       "RemoteUsername": "rstudio",
       "RemoteRef": "HEAD",
-      "RemoteSha": "e25ad64409fcfa6c0a16f704d2a85701bd91f111",
+      "RemoteSha": "7d7b6e9aaa0a502c7d7363dedbcdb6d19fd44761",
       "Requirements": [
         "R",
         "base64enc",
@@ -211,7 +212,7 @@
         "rlang",
         "sass"
       ],
-      "Hash": "9555d896ead05fa16a6dad9ebd0e9645"
+      "Hash": "24cf4a243dcd4bc280a9bebccd082240"
     },
     "cachem": {
       "Package": "cachem",
@@ -404,9 +405,9 @@
     },
     "dplyr": {
       "Package": "dplyr",
-      "Version": "1.1.3",
+      "Version": "1.1.2",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -423,7 +424,7 @@
         "utils",
         "vctrs"
       ],
-      "Hash": "e85ffbebaad5f70e1a2e2ef4302b4949"
+      "Hash": "dea6970ff715ca541c387de363ff405e"
     },
     "echarts4r": {
       "Package": "echarts4r",
@@ -566,9 +567,14 @@
     },
     "htmltools": {
       "Package": "htmltools",
-      "Version": "0.5.6",
-      "Source": "Repository",
-      "Repository": "CRAN",
+      "Version": "0.5.6.9000",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "htmltools",
+      "RemoteUsername": "rstudio",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "f8ef163d8eb37bd52fad26bf06dc9da44d2a1a3f",
       "Requirements": [
         "R",
         "base64enc",
@@ -579,7 +585,7 @@
         "rlang",
         "utils"
       ],
-      "Hash": "a2326a66919a3311f7fbb1e3bf568283"
+      "Hash": "4b377ae8ccc00c24b822e0afadb4a7ce"
     },
     "htmlwidgets": {
       "Package": "htmlwidgets",
@@ -1037,7 +1043,7 @@
     },
     "rhino": {
       "Package": "rhino",
-      "Version": "1.5.0",
+      "Version": "1.4.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1060,7 +1066,7 @@
         "withr",
         "yaml"
       ],
-      "Hash": "aec1b2db96151d32a244d38b136d8392"
+      "Hash": "4033065e4cfd8171910d0fe2ab51bde1"
     },
     "rlang": {
       "Package": "rlang",

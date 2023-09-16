@@ -1,14 +1,19 @@
-# main.R
-
 box::use(
-  shiny[fluidPage, uiOutput, moduleServer, NS],
-  "view/d3_chart_module.R"[d3_chart_ui, d3_chart_server]
+  shiny[shinyApp],
+  app/view/scatter_module[ui, server]
 )
 
-#' @export
-ui <- function(id) {
-  ns <- NS(id)
+# UI definition function
+app_ui <- function(request) {
   fluidPage(
-    d3_chart_ui(ns("d3_chart"))
+    titlePanel("Shiny Rhino r2d3 Example"),
+    ui("scatter1")
   )
 }
+
+# Server logic function
+app_server <- function(input, output, session) {
+  server("scatter1")
+}
+
+shinyApp(ui = app_ui, server = app_server)
