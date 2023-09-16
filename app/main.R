@@ -15,7 +15,7 @@ ui <- function(id) {
       tags$script(src = "static/bar-chart.js")
     ),
     tags$div(class = "legend", id = ns("my_chart")),
-    tags$svg(class = "chart", id = ns("my_chart")),
+    tags$div(class = "chart", id = ns("my_chart")),
     tags$div(class = "table", id = ns("my_chart"))
   )
 }

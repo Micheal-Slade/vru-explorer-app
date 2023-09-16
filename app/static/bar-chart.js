@@ -9,26 +9,46 @@ document.addEventListener('DOMContentLoaded', (event) => {
  //Todo: chart needs dynamic sizing and margins.
 
 
-
+// get data 
   const data = [4, 8, 15, 16, 23, 42, 50, 100, 200];
 
+// svg dimmensions
   const height = 600;
-  const width = 620;
+  let width = 620;
   const marginTop = 20;
   const marginBottom = 20;
   const marginLeft = 30;
   const marginRight = 20;
-  
   const barHeight = 20;
 
   // Check to see that the data has loaded in correctly
  console.log(data);
 
- const chart = d3.select('.chart'); // this should really be an ID
- 
+let chart = d3.select('.chart'); // this should really be an ID
+let legend =  d3.select('.legend');
+let table =  d3.select('.table');
+
  // clear all step to ensure no artifacts
  chart.selectAll('*').remove();
- 
+
+ chart.text('Chart');
+ legend.text('Legend');
+
+ table.
+ text('Table');
+
+// implement the svg dimensions
+
+const svg = chart
+  .append('svg')
+  .attr('width', marginLeft + width + marginRight)
+  .attr('height', marginTop + height + marginBottom)
+  .style('background-color', '#fff')
+  .append('g')
+  .attr('transform', `translate(${marginLeft},${marginTop})`);
+
+
+
  // set up x-axis scale
   const x = d3.scaleLinear()
     .domain([0, d3.max(data)])
